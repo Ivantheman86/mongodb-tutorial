@@ -1,10 +1,11 @@
 from colorama import Fore
 import program_guests
 import program_hosts
+import data.mongo_setup as mongo_setup
 
 
 def main():
-    # TODO: Setup mongoengine global values
+    mongo_setup.global_setup()
 
     print_header()
 
@@ -41,7 +42,7 @@ OI??????????I$$M=,:+7??I$7I???????????
                      ~ZMM~ """
 
     print(Fore.WHITE + '****************  SNAKE BnB  ****************')
-    print(Fore.GREEN + snake)
+    print(Fore.BLUE + snake)
     print(Fore.WHITE + '*********************************************')
     print()
     print("Welcome to Snake BnB!")
